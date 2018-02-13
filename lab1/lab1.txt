@@ -1,0 +1,53 @@
+Class 1
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Class1
+    {
+        public int method(string yearSt)
+        {
+            int yearInt = 0;
+            yearInt = Convert.ToInt32(yearSt);
+            int cent = yearInt / 100 + 1;
+            return cent;
+        }
+    }
+}
+
+
+
+
+Program
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            {
+                Class1 Obj1 = new Class1();
+                Console.Write("Введите номер года: ");
+                string yearSt = Console.ReadLine();
+                int cent = Obj1.method(yearSt);
+                Console.WriteLine("Столетие: {0}", cent);
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
