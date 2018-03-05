@@ -1,0 +1,84 @@
+Program
+
+using System;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+
+            Console.WriteLine("Введите размер массива:");
+            int number = int.Parse(Console.ReadLine());
+
+            int[] array = new int[number]; 
+
+            Random rand = new Random();
+
+            for (int j = 0; j < array.Length; j++)
+            {
+                array[j] = rand.Next(0, 50);
+            }
+
+            Console.WriteLine("Вывод исходного массива:");
+            foreach (int item in array)
+            {
+                Console.Write(item.ToString() + " ");  
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            ChangeTwoMax change = new ChangeTwoMax();
+
+            int[] twoMax = change.ToChoiceTwoMax(array);
+
+            Console.WriteLine("Вывод измененного массива:");
+
+            foreach (int item in array)
+            {
+                Console.Write(item.ToString() + " ");  
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+ChangeTwoMax
+
+namespace ConsoleApp1
+{
+    class ChangeTwoMax
+    {
+        public int[] ToChoiceTwoMax(int[] array)
+        {
+
+            int max1 = 0;
+            int max2 = 0;
+            int index1 = 0;
+            int index2 = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] >= max1)
+                {
+                    max1 = array[i];
+                    index1 = i;
+                }
+
+                else if (array[i] >= max2)
+                {
+                    max2 = array[i];
+                    index2 = i;
+                }
+            }
+            int temp = array[index1];
+
+            array[index1] = array[index2];
+            array[index2] = temp;
+
+            return array;
+        }
+    }
+}
