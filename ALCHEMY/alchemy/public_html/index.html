@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" href="../css/style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&amp;subset=cyrillic" rel="stylesheet">   
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+        <link rel="shortcut icon" href="../img/favicon.ico" type="image/ico">
+        <script src="../js/libs/d3.js"></script>
+        <script src="../js/alchemy.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <title>ALCHEMY</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    	<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-8 ">
+						<div class="d-flex">
+							<img class="logosvg my-auto" src="../img/alchemy.svg">
+							<div class="logo">ALCHEMY</div>
+							<button class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+	                            ?
+	                        </button>
+						</div>
+					</div>
+					<div class="col-2 ml-auto">
+						<button type="button" class="btn btn-danger " onclick="reloadPage()">RESTART</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+       <section>
+			<div class="container">
+				<div class="row">
+					<div class="col-10 mx-auto">
+						<span class="d-flex justify-content-center"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="exampleModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Рецепты</h4>
+						<button class="close" type="button" data-dismiss="modal">×</button>
+					</div>
+					<div class="modal-body">
+						<ul>
+							<li>dust = earth + air</li>
+							<li>energy = air + fire</li>
+							<li>swamp = water + earth</li>
+							<li>quicksylver = water + metal</li>
+							<li>lava = earth + fire</li>
+							<li>steam = lava + water = water + air</li>
+							<li>ash = fire + worm = fire + snake</li>
+							<li>storm = air + energy</li>
+							<li>stone = lava + water = lava + air</li>
+							<li>sand = stone + water</li>
+							<li>glass = sand + fire</li>
+							<li>metal = stone + fire</li>
+							<li>life = swamp + energy</li>
+							<li>egg = snake + snake = stone + life</li>
+							<li>weeds = life + water</li>
+							<li>mushrooms = weeds + earth</li>
+							<li>bacteria = life + swamp</li>
+							<li>plancton = bacteria + water</li>
+							<li>worm = bacteria + swamp</li>
+							<li>fish = bacteria + plankton</li>
+							<li>whale = fish + plankton</li>
+							<li>snake = worm + swamp</li>
+							<li>bird = egg + air</li>
+							<li>turtle = egg + sand</li>
+							<li>lizard = worm + snake</li>
+						</ul>
+					</div>
+					<div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Закрыть</button></div>
+				</div>
+			</div>
+		</div>
+    </body>
+    <script type="text/javascript">
+        function reloadPage() {
+            window.location.reload()
+        }
+    </script>
+</html>
